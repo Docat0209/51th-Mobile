@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">疫苗預約平台</string>
+    <string name="app_title">VA Care</string>
+    <string name="login">登入</string>
+    <string name="password">PASSWORD</string>
+    <string name="your_email">YOUR EMAIL</string>
+    <string name="sign_up">Sign up</string>
+</resources>
