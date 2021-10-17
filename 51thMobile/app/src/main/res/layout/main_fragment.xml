@@ -70,7 +70,7 @@
         android:id="@+id/buttonLogin"
         android:layout_width="330dp"
         android:layout_height="50dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/radius"
         android:backgroundTint="@color/purple_login"
         android:gravity="center"
@@ -78,7 +78,7 @@
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
