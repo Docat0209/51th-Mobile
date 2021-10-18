@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.51thMobile" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="Theme.51thMobile" parent="Theme.AppCompat.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/dark</item>
         <item name="colorPrimaryVariant">@color/dark</item>
@@ -14,5 +14,6 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@color/blue</item>
         <item name="buttonStyle">@color/purple_200</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 </resources>

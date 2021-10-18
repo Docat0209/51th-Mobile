@@ -2,6 +2,7 @@ package com.example.a51thmobile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toolbar
 import com.example.a51thmobile.ui.main.MainFragment
 
 class MainActivity : AppCompatActivity() {

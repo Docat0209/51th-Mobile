@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="61dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/sign_up"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="18dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"/>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="369dp"
+            android:layout_height="575dp"
+
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editText6"
+                    android:layout_width="345dp"
+                    android:layout_height="51dp"
+                    android:backgroundTint="@color/black"
+                    android:hint="電話"
+                    android:textColorHint="@color/dark"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="310dp">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editText4"
+                    android:layout_width="345dp"
+                    android:layout_height="51dp"
+                    android:backgroundTint="@color/black"
+                    android:hint="身分證字號"
+                    android:textColorHint="@color/dark"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="379dp">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editText5"
+                    android:layout_width="345dp"
+                    android:layout_height="51dp"
+                    android:backgroundTint="@color/black"
+                    android:hint="姓名"
+                    android:textColorHint="@color/dark"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="241dp">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="345dp"
+                    android:layout_height="51dp"
+                    android:backgroundTint="@color/black"
+                    android:hint="E-mail"
+                    android:textColorHint="@color/dark"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="36dp">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editText3"
+                    android:layout_width="345dp"
+                    android:layout_height="51dp"
+                    android:backgroundTint="@color/black"
+                    android:hint="再次輸入密碼"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/dark"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="174dp">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/editText"
+                    android:layout_width="345dp"
+                    android:layout_height="51dp"
+                    android:backgroundTint="@color/black"
+                    android:hint="密碼"
+                    android:inputType="textPassword"
+                    android:textColorHint="@color/dark"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="105dp">
+
+                </androidx.appcompat.widget.AppCompatEditText>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
