@@ -14,6 +14,7 @@ class SignupActivity:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signup_activity)
         setSupportActionBar(findViewById(R.id.toolbar))
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_round_arrow_back_ios_24)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowTitleEnabled(false)
     }

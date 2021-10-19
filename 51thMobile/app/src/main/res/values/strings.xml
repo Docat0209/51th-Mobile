@@ -5,6 +5,7 @@
     <string name="password">PASSWORD</string>
     <string name="your_email">YOUR EMAIL</string>
     <string name="sign_up">會員註冊</string>
+    <string name="sign_up_button">sign up</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>

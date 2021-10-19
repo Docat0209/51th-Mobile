@@ -3,11 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="500dp">
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -18,110 +19,142 @@
             tools:layout_editor_absoluteX="61dp">
 
             <TextView
+                android:id="@+id/sign_text"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
+                android:layout_gravity="center"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/sign_up"
+                android:textColor="@color/white"
                 tools:layout_editor_absoluteX="16dp"
-                tools:layout_editor_absoluteY="18dp"
-                android:layout_gravity="center"
-                android:textColor="@color/white"/>
+                tools:layout_editor_absoluteY="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_gravity="left"
+                android:drawableLeft="@drawable/ic_round_arrow_back_ios_24"
+                android:fontFamily="sans-serif-black"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="18dp" />
         </androidx.appcompat.widget.Toolbar>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="369dp"
-            android:layout_height="575dp"
 
-            android:layout_marginTop="24dp"
-            android:backgroundTint="@color/white"
-            app:cardCornerRadius="20dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/radius"
+            android:orientation="vertical"
+
             app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                >
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                app:hintTextColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black"
+                android:hint="E-mail">
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/editText6"
+                    android:id="@+id/sign_email"
                     android:layout_width="345dp"
                     android:layout_height="51dp"
-                    android:backgroundTint="@color/black"
-                    android:hint="電話"
-                    android:textColorHint="@color/dark"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="310dp">
+                    android:backgroundTint="@color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-                </androidx.appcompat.widget.AppCompatEditText>
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:hintTextColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black"
+                android:hint="密碼">
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/editText4"
+                    android:id="@+id/sign_pass"
                     android:layout_width="345dp"
                     android:layout_height="51dp"
-                    android:backgroundTint="@color/black"
-                    android:hint="身分證字號"
-                    android:textColorHint="@color/dark"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="379dp">
+                    android:backgroundTint="@color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-                </androidx.appcompat.widget.AppCompatEditText>
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:hintTextColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black"
+                android:hint="再次輸入密碼">
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/editText5"
+                    android:id="@+id/sign_passagain"
                     android:layout_width="345dp"
                     android:layout_height="51dp"
-                    android:backgroundTint="@color/black"
-                    android:hint="姓名"
-                    android:textColorHint="@color/dark"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="241dp">
+                    android:backgroundTint="@color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-                </androidx.appcompat.widget.AppCompatEditText>
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:hintTextColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black"
+                android:hint="名稱">
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/sign_name"
                     android:layout_width="345dp"
                     android:layout_height="51dp"
-                    android:backgroundTint="@color/black"
-                    android:hint="E-mail"
-                    android:textColorHint="@color/dark"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="36dp">
+                    android:backgroundTint="@color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-                </androidx.appcompat.widget.AppCompatEditText>
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:hintTextColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black"
+                android:hint="電話">
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/editText3"
+                    android:id="@+id/sign_phone"
                     android:layout_width="345dp"
                     android:layout_height="51dp"
-                    android:backgroundTint="@color/black"
-                    android:hint="再次輸入密碼"
-                    android:inputType="textPassword"
-                    android:textColorHint="@color/dark"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="174dp">
+                    android:backgroundTint="@color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-                </androidx.appcompat.widget.AppCompatEditText>
-
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:hintTextColor="@color/black"
+                android:layout_gravity="center"
+                android:textColorHint="@color/black"
+                android:hint="地址">
                 <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/editText"
+                    android:id="@+id/sign_place"
                     android:layout_width="345dp"
                     android:layout_height="51dp"
-                    android:backgroundTint="@color/black"
-                    android:hint="密碼"
-                    android:inputType="textPassword"
-                    android:textColorHint="@color/dark"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="105dp">
+                    android:backgroundTint="@color/black"/>
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/sing_up_button"
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/radius_view"
+                android:backgroundTint="@color/purple_500"
+                android:layout_gravity="center"
+                android:text="註冊"
+                android:gravity="center"
+                android:layout_marginBottom="50dp"/>
 
-                </androidx.appcompat.widget.AppCompatEditText>
-
-            </androidx.appcompat.widget.LinearLayoutCompat>
-
-        </androidx.cardview.widget.CardView>
+        </androidx.appcompat.widget.LinearLayoutCompat>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
