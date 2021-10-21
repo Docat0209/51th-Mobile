@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.a51thmobile.SignupActivity
+import com.example.a51thmobile.SqlDBHelper
 import com.example.a51thmobile.databinding.MainFragmentBinding
 
 class MainFragment : Fragment() {
@@ -24,6 +25,8 @@ class MainFragment : Fragment() {
     ): View {
         _binding = MainFragmentBinding.inflate(inflater, container, false)
         val view = binding.root
+        val SqlDBHelper = SqlDBHelper(requireContext())
+        println(SqlDBHelper.sql("Select *"))
         return view
     }
 

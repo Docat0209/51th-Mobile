@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.covid19vaccineapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_news"
+            app:destination="@id/navigation_news" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_reserve"
+            app:destination="@id/navigation_reserve" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_eduinfo"
+            app:destination="@id/navigation_eduinfo" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_temprec"
+            app:destination="@id/navigation_temprec" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_setting"
+            app:destination="@id/navigation_setting" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_eduinfo"
+        android:name="com.example.covid19vaccineapp.ui.eduinfo.EduinfoFragment"
+        android:label="@string/title_eduinfo"
+        tools:layout="@layout/fragment_eduinfo" />
+    <fragment
+        android:id="@+id/navigation_news"
+        android:name="com.example.covid19vaccineapp.ui.news.NewsFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news" />
+    <fragment
+        android:id="@+id/navigation_reserve"
+        android:name="com.example.covid19vaccineapp.ui.reserve.ReserveFragment"
+        android:label="@string/title_reserve"
+        tools:layout="@layout/fragment_reserve" />
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.covid19vaccineapp.ui.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_home"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_signup"
+            app:destination="@id/navigation_signup" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.example.covid19vaccineapp.ui.setting.SettingFragment"
+        android:label="@string/title_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/navigation_signup"
+        android:name="com.example.covid19vaccineapp.ui.signup.SignupFragment"
+        android:label="@string/title_signup"
+        tools:layout="@layout/fragment_signup" />
+    <fragment
+        android:id="@+id/navigation_temprec"
+        android:name="com.example.covid19vaccineapp.ui.temprec.TemprecFragment"
+        android:label="@string/title_temprec"
+        tools:layout="@layout/fragment_temprec" />
+
+</navigation>

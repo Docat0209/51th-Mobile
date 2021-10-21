@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <include
+        android:id="@+id/toolbar_home"
+        layout="@layout/toolbar_setting"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-88dp" />
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/text_home_title"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+        app:layout_constraintEnd_toStartOf="@+id/toolbar_home"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_home"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_eduinfo"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_radius_20dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/text_home_eduinfo"
+        android:textColor="@color/white"
+
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/toolbar_home"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_home"
+        app:layout_constraintTop_toBottomOf="@+id/button_news" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_news"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_radius_20dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/text_home_news"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/toolbar_home"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_home"
+        app:layout_constraintTop_toBottomOf="@+id/button_reserve" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_temprec"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_radius_20dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/text_home_temprec"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/toolbar_home"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_home"
+        app:layout_constraintTop_toBottomOf="@+id/button_eduinfo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_reserve"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_radius_20dp"
+        android:backgroundTint="@color/red"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/text_home_reserve"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/toolbar_home"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/toolbar_home"
+        app:layout_constraintTop_toBottomOf="@+id/textView_title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
