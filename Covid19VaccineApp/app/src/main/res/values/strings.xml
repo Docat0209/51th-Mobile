@@ -37,4 +37,9 @@
     <string name="text_setting_condition">條款和條件</string>
     <string name="text_setting_username">VA SU</string>
     <string name="text_temprec_serach">Search</string>
+    <string name="text_alert_addtemp">新增體溫紀錄</string>
+    <string name="text_alert_add">新增</string>
+    <string name="text_alert_cancle">取消</string>
+    <string name="_45_0_c">45.0 °C</string>
+    <string name="_30_0_c">30.0 °C</string>
 </resources>
