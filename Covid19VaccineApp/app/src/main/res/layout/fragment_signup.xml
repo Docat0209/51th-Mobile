@@ -25,76 +25,95 @@
             android:background="@drawable/bg_radius_20dp"
             android:gravity="center_horizontal"
             android:orientation="vertical">
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputLayout_email"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="40dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="sans-serif-light"
-                android:hint="@string/text_signup_hint_email"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                app:hintEnabled="true" />
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputLayout_password"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputLayout_email"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:hint="@string/text_signup_hint_email"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="sans-serif-light"
-                android:hint="@string/text_signup_hint_password"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                app:hintEnabled="true" />
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputLayout_password_again"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputLayout_password"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:hint="@string/text_signup_hint_password"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="sans-serif-light"
-                android:hint="@string/text_signup_hint_password_again"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                app:hintEnabled="true" />
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputLayout_name"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputLayout_password_again"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:hint="@string/text_signup_hint_password_again"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="sans-serif-light"
-                android:hint="@string/text_signup_hint_name"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                app:hintEnabled="true" />
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputLayout_phonenumber"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputLayout_name"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:hint="@string/text_signup_hint_name"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="sans-serif-light"
-                android:hint="@string/text_signup_hint_phonenumber"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                app:hintEnabled="true" />
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textInputLayout_address"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputLayout_phonenumber"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:hint="@string/text_signup_hint_phonenumber"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_marginTop="30dp"
-                android:backgroundTint="@color/black"
-                android:fontFamily="sans-serif-light"
-                android:hint="@string/text_signup_hint_address"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
-                app:hintEnabled="true" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputLayout_address"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/black"
+                    android:hint="@string/text_signup_hint_address"
+                    android:minHeight="48dp"
+                    android:textColor="@color/black" />
+            </com.google.android.material.textfield.TextInputLayout>
+
             <Button
                 android:id="@+id/button_register"
                 android:layout_width="65dp"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginBottom="50dp"
                 android:background="@drawable/bg_radius_10dp"

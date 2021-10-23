@@ -5,7 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.databinding.FragmentEduinfoBinding
 
 class EduinfoFragment : Fragment() {
@@ -24,6 +27,15 @@ class EduinfoFragment : Fragment() {
 
         _binding = FragmentEduinfoBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        // tool bar
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarEduinfo.toolbar)
+        val toolbar = (activity as AppCompatActivity).supportActionBar
+        toolbar!!.setDisplayShowTitleEnabled(false)
+        binding.toolbarEduinfo.toolbarTitle.text = resources.getString(R.string.title_eduinfo)
+        binding.toolbarEduinfo.toolbarCancel.setOnClickListener{
+            Navigation.findNavController(it).popBackStack()
+        }
+
 
         return root
     }

@@ -42,4 +42,22 @@
     <string name="text_alert_cancle">取消</string>
     <string name="_45_0_c">45.0 °C</string>
     <string name="_30_0_c">30.0 °C</string>
+    <string name="date">日期</string>
+    <string name="test_date_time">Oct 12, 20 21</string>
+    <string name="hour_test">7</string>
+    <string name="time_mid">:</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="time_test">45</string>
+    <string name="video_text">防疫大作戰-打完疫苗後 還是要做好防疫(張厚台醫師，國語)</string>
+    <string name="video_text_much">防疫大作戰-打完疫苗後 還是要做好防疫(張厚台醫師，國語)防疫大作戰-打完疫苗後 還是要做好防疫(張厚台醫師，國語)防疫大作戰-打完疫苗後 還是要做好防疫(張厚台醫師，國語)防疫大作戰-打完疫苗後 還是要做好防疫(張厚台醫師，國語)防疫大作戰-打完疫苗後 還是要做好防疫(張厚台醫師，國語)防疫大作戰-打完疫苗後 還是要做好防疫(張厚台醫師，國語)</string>
+    <string name="personal_id">身分證字號</string>
+    <string name="reserve">預約</string>
+    <string name="vaccine_type">疫苗種類</string>
+    <string name="vaccine_az">AZ</string>
+    <string name="vaccine_bnt">BNT</string>
+    <string name="vaccine_moderna">莫德納</string>
+    <string name="vaccine_mvc">高端</string>
+    <string name="nofaction_month_time">2021 - 9</string>
+    <string name="nofaction_date">11</string>
 </resources>

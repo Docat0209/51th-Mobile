@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.covid19vaccineapp.R
@@ -25,6 +26,14 @@ class NewsFragment : Fragment() {
 
         _binding = FragmentNewsBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        // tool bar
+        (activity as AppCompatActivity).setSupportActionBar(binding.toolbarNews.toolbar)
+        val toolbar = (activity as AppCompatActivity).supportActionBar
+        toolbar!!.setDisplayShowTitleEnabled(false)
+        binding.toolbarNews.toolbarTitle.text = resources.getString(R.string.title_eduinfo)
+        binding.toolbarNews.toolbarCancel.setOnClickListener{
+            Navigation.findNavController(it).popBackStack()
+        }
 
 
         return root
