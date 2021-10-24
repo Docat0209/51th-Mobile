@@ -6,9 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.doAfterTextChanged
+import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.covid19vaccineapp.R
+import com.example.covid19vaccineapp.SqlDataBaseHelper
 import com.example.covid19vaccineapp.databinding.FragmentSignupBinding
 
 class SignupFragment : Fragment() {
@@ -27,6 +30,7 @@ class SignupFragment : Fragment() {
 
         _binding = FragmentSignupBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        val sql = SqlDataBaseHelper(requireContext())
         // tool bar
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbar.toolbar)
         val toolbar = (activity as AppCompatActivity).supportActionBar
@@ -36,9 +40,27 @@ class SignupFragment : Fragment() {
             Navigation.findNavController(it).popBackStack()
         }
         //
+
+
         binding.buttonRegister.setOnClickListener{
-            Toast.makeText(context,"Register Successfully",Toast.LENGTH_LONG).show()
-            Navigation.findNavController(it).popBackStack()
+            if (binding.textInputLayoutPassword.text.toString() == binding.textInputLayoutPasswordAgain.text.toString()) {
+                try {
+                    sql.query(
+                        "insert into User values(NULL," +
+                                "'${binding.textInputLayoutEmail.text.toString()}'," +
+                                "'${binding.textInputLayoutPassword.text.toString()}'," +
+                                "'${binding.textInputLayoutName.text.toString()}'," +
+                                "'${binding.textInputLayoutPhonenumber.text.toString()}'," +
+                                "'${binding.textInputLayoutAddress.text.toString()}')"
+                    )
+                    Toast.makeText(context, "Register Successful", Toast.LENGTH_LONG).show()
+                    Navigation.findNavController(it).popBackStack()
+                } catch (e: Exception) {
+                    Toast.makeText(context, "Register Fail", Toast.LENGTH_LONG).show()
+                }
+            } else {
+                Toast.makeText(context,"密碼不一致",Toast.LENGTH_LONG).show()
+            }
         }
 
 
