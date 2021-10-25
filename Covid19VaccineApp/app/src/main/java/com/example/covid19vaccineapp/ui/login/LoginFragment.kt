@@ -38,9 +38,13 @@ class LoginFragment : Fragment() {
             Navigation.findNavController(it).navigate(R.id.action_navigation_login_to_navigation_signup)
         }
 
+        binding.clear.setOnClickListener{
+            context?.deleteDatabase("test.db")
+        }
+
         binding.buttonLogin.setOnClickListener{
-            if(sql.getDate("select * from User where " +
-                        "email = '${binding.edittextEmail.text}' and password = '${binding.editTextPassword.text}'").count == 1){
+            if(binding.edittextEmail.text.toString() == "admin" && binding.editTextPassword.text.toString() == "0000"){
+
                 Navigation.findNavController(it).navigate(R.id.action_navigation_login_to_navigation_home)
             } else {
                 Toast.makeText(requireContext(),"Login Fail",Toast.LENGTH_LONG).show()

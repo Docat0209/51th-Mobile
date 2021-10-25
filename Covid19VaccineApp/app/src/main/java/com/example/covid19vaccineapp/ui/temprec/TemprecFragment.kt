@@ -1,6 +1,7 @@
 package com.example.covid19vaccineapp.ui.temprec
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -13,11 +14,20 @@ import com.example.covid19vaccineapp.databinding.FragmentTemprecBinding
 import android.app.AlertDialog.Builder
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.text.Editable
+import android.text.TextWatcher
 import android.widget.*
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.example.covid19vaccineapp.SqlDataBaseHelper
+import com.example.covid19vaccineapp.TempRec
+import com.example.covid19vaccineapp.TempRecAdapter
 import com.example.covid19vaccineapp.databinding.AlertLabelEditorBinding
 import java.text.SimpleDateFormat
 import java.util.*
+import androidx.recyclerview.widget.RecyclerView.Adapter as Adapter
 
 
 class TemprecFragment : Fragment() {
@@ -28,7 +38,7 @@ class TemprecFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    @SuppressLint("SimpleDateFormat")
+    @SuppressLint("SimpleDateFormat", "Range")
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -37,6 +47,7 @@ class TemprecFragment : Fragment() {
 
         _binding = FragmentTemprecBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        val sql = SqlDataBaseHelper(requireContext())
         // tool bar
         (activity as AppCompatActivity).setSupportActionBar(binding.toolbarTemprec.toolbar)
         val toolbar = (activity as AppCompatActivity).supportActionBar
@@ -45,6 +56,23 @@ class TemprecFragment : Fragment() {
         binding.toolbarTemprec.toolbarCancel.setOnClickListener{
             Navigation.findNavController(it).popBackStack()
         }
+
+        reload("")
+
+        binding.serch.addTextChangedListener(object :TextWatcher{
+            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+
+            }
+
+            override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
+                reload(binding.serch.text.toString())
+            }
+
+            override fun afterTextChanged(p0: Editable?) {
+
+            }
+
+        })
 
         //dialog
         binding.toolbarTemprec.toolbarAdd.setOnClickListener {
@@ -100,6 +128,7 @@ class TemprecFragment : Fragment() {
                 DatePickerDialog(requireContext(), { _, year, month, day ->
                     monthName = SimpleDateFormat("MMM").format(month)
                     format = "$monthName $day , $year"
+                    c.set(year, month, day)
                     dateText.text = format
                 }, yearNow, monthNow, dayNow).show()
             }//date picker end
@@ -140,7 +169,9 @@ class TemprecFragment : Fragment() {
             //time picker
             val timePicker = bind.timePicker
             timePicker.setOnClickListener{
-                TimePickerDialog(requireContext(),{_ , hour , minute ->
+                TimePickerDialog(requireContext(),2,{_ , hour , minute ->
+                    c.set(Calendar.HOUR_OF_DAY,hour)
+                    c.set(Calendar.MINUTE,minute)
                     if(hour >= 12){
                         hourText.text = (hour - 12).toString()
                         rd.check(R.id.button_PM)
@@ -160,6 +191,9 @@ class TemprecFragment : Fragment() {
             }
 
             buttonAdd.setOnClickListener{
+                val time = SimpleDateFormat("yyyy/MM/dd EE aa HH:mm" , Locale.TAIWAN).format(c.time)
+                sql.query("insert into tempRec values(NULL,'$time','${bind.bar.text}')")
+                reload(binding.serch.text.toString())
                 alertDialog.hide()
                 Toast.makeText(requireContext(),"新增成功",Toast.LENGTH_LONG).show()
             }
@@ -175,6 +209,25 @@ class TemprecFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    @SuppressLint("Range")
+    fun reload(like:String)
+    {
+        val sql = SqlDataBaseHelper(requireContext())
+        val tempList = mutableListOf<TempRec>()
+
+        val c = sql.getDate("select * from tempRec where time like '$like%' ")
+        while (c.moveToNext()){
+            try {
+                tempList.add(TempRec( c.getString(c.getColumnIndex("time")) , c.getFloat(c.getColumnIndex("tempNum")) ))
+            } finally {
+            }
+        }
+
+        binding.recyclerView.adapter = TempRecAdapter(requireContext() , tempList)
+        binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
+    }
+
 
 
 

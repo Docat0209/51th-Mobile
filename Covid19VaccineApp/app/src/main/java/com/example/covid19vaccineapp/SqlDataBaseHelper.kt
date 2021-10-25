@@ -10,8 +10,7 @@ import android.database.sqlite.SQLiteOpenHelper
 class SqlDataBaseHelper(context:Context):SQLiteOpenHelper(context,"test.db",null,4) {
 
     override fun onCreate(p0: SQLiteDatabase) {
-        val sql = "CREATE TABLE if not exists user ( id integer PRIMARY KEY autoincrement, email text UNIQUE, password text , name text , phone text , address text)"
-        println("Table Create")
+        val sql = "CREATE TABLE if not exists tempRec (id integer primary key autoincrement , time text , tempNum float)"
         p0.execSQL(sql)
     }
 
