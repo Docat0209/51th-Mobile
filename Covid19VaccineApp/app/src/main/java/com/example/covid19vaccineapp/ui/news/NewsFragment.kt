@@ -1,5 +1,6 @@
 package com.example.covid19vaccineapp.ui.news
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,8 +8,18 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.covid19vaccineapp.NewsAdapter
 import com.example.covid19vaccineapp.R
+import com.example.covid19vaccineapp.TempRecAdapter
 import com.example.covid19vaccineapp.databinding.FragmentNewsBinding
+import com.example.covid19vaccineapp.model.News
+import org.json.JSONArray
+import org.json.JSONObject
+import java.net.URL
+import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 
 class NewsFragment : Fragment() {
 
@@ -34,6 +45,7 @@ class NewsFragment : Fragment() {
         binding.toolbarNews.toolbarCancel.setOnClickListener{
             Navigation.findNavController(it).popBackStack()
         }
+        reload()
 
 
         return root
@@ -42,5 +54,34 @@ class NewsFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    @SuppressLint("Range", "SimpleDateFormat")
+    fun reload()
+    {
+        val newsList = mutableListOf<News>()
+        binding.newsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        Thread{
+            val jsonData =
+                URL("http://54.234.67.26/taiwancovid19information/information/health").readText()
+            val jsonObject = JSONObject(jsonData)
+
+            val jsonArray = jsonObject.getJSONObject("message").getJSONArray("items")
+
+            for (i in 0 until jsonArray.length()) {
+
+                val data = jsonArray.getJSONObject(i).getJSONObject("snippet")
+                val title = data.getString("title")
+                val month = data.getString("publishedAt").substring(0,7)
+                val day = data.getString("publishedAt").substring(8,10)
+                newsList.add(News(month, day, title))
+            }
+
+            activity?.runOnUiThread {
+                binding.newsRecyclerView.adapter = NewsAdapter(newsList)
+            }
+        }.start()
+
     }
 }

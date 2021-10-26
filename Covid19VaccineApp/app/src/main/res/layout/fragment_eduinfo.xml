@@ -26,7 +26,8 @@
                 app:queryHint="@string/text_temprec_serach"
                 android:background="@drawable/bg_radius_15dp"
                 />
-            <androidx.appcompat.widget.LinearLayoutCompat
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/eduinfo_recycler_view"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:layout_width="match_parent"
@@ -34,83 +35,9 @@
                 android:background="@drawable/bg_radius_20dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:src="@drawable/data"/>
-                    <TextView
-                        android:padding="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:text="@string/video_text"/>
 
-                </LinearLayout>
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:src="@drawable/data"/>
-                    <TextView
-                        android:padding="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:text="@string/video_text"/>
 
-                </LinearLayout>
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:src="@drawable/data"/>
-                    <TextView
-                        android:padding="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:text="@string/video_text"/>
-
-                </LinearLayout>
-                <LinearLayout
-                    android:padding="10dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:src="@drawable/data"/>
-                    <TextView
-                        android:padding="10dp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif-black"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        android:text="@string/video_text"/>
-
-                </LinearLayout>
-            </androidx.appcompat.widget.LinearLayoutCompat>
+            </androidx.recyclerview.widget.RecyclerView>
         </androidx.appcompat.widget.LinearLayoutCompat>
     </ScrollView>
 

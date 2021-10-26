@@ -1,7 +1,6 @@
 package com.example.covid19vaccineapp.ui.temprec
 
 import android.annotation.SuppressLint
-import android.app.Activity
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,15 +18,12 @@ import android.text.TextWatcher
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.covid19vaccineapp.SqlDataBaseHelper
-import com.example.covid19vaccineapp.TempRec
+import com.example.covid19vaccineapp.model.TempRec
 import com.example.covid19vaccineapp.TempRecAdapter
 import com.example.covid19vaccineapp.databinding.AlertLabelEditorBinding
 import java.text.SimpleDateFormat
 import java.util.*
-import androidx.recyclerview.widget.RecyclerView.Adapter as Adapter
 
 
 class TemprecFragment : Fragment() {
@@ -224,7 +220,7 @@ class TemprecFragment : Fragment() {
             }
         }
 
-        binding.recyclerView.adapter = TempRecAdapter(requireContext() , tempList)
+        binding.recyclerView.adapter = TempRecAdapter(tempList)
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
 

@@ -2,15 +2,9 @@ package com.example.covid19vaccineapp
 
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuItem
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
 import com.example.covid19vaccineapp.databinding.ActivityMainBinding
+import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 

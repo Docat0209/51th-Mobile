@@ -1,16 +1,14 @@
 package com.example.covid19vaccineapp
 
 import android.annotation.SuppressLint
-import android.content.ClipData.Item
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.Adapter
+import com.example.covid19vaccineapp.model.TempRec
 
-class TempRecAdapter(val context: Context, val tempRecList: List<TempRec>) : RecyclerView.Adapter<TempRecAdapter.ViewHolder>() {
+class TempRecAdapter(private val tempRecList: List<TempRec>) : RecyclerView.Adapter<TempRecAdapter.ViewHolder>() {
 
     inner class ViewHolder(item: View) :RecyclerView.ViewHolder(item){
         private val time: TextView = item.findViewById(R.id.time)

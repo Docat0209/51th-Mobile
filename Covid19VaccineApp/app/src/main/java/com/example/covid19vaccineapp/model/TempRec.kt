@@ -1,6 +1,6 @@
-package com.example.covid19vaccineapp
+package com.example.covid19vaccineapp.model
 
 class TempRec(inputTime:String , inputTemp: Float) {
     val time = inputTime
-    val temp:Float = inputTemp
+    val temp = inputTemp
 }
