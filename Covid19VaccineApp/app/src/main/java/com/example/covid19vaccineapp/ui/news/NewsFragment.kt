@@ -1,25 +1,22 @@
 package com.example.covid19vaccineapp.ui.news
 
 import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.covid19vaccineapp.NewsAdapter
+import com.example.covid19vaccineapp.adapter.NewsAdapter
 import com.example.covid19vaccineapp.R
-import com.example.covid19vaccineapp.TempRecAdapter
 import com.example.covid19vaccineapp.databinding.FragmentNewsBinding
 import com.example.covid19vaccineapp.model.News
-import org.json.JSONArray
 import org.json.JSONObject
 import java.net.URL
-import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 class NewsFragment : Fragment() {
 
@@ -59,6 +56,8 @@ class NewsFragment : Fragment() {
     @SuppressLint("Range", "SimpleDateFormat")
     fun reload()
     {
+        val progressDialog = ProgressDialog.show(requireContext(),"","Loading....")
+
         val newsList = mutableListOf<News>()
         binding.newsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
@@ -81,6 +80,7 @@ class NewsFragment : Fragment() {
             activity?.runOnUiThread {
                 binding.newsRecyclerView.adapter = NewsAdapter(newsList)
             }
+            progressDialog.dismiss()
         }.start()
 
     }

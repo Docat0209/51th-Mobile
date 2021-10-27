@@ -18,9 +18,9 @@ import android.text.TextWatcher
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.covid19vaccineapp.SqlDataBaseHelper
+import com.example.covid19vaccineapp.helper.SqlDataBaseHelper
 import com.example.covid19vaccineapp.model.TempRec
-import com.example.covid19vaccineapp.TempRecAdapter
+import com.example.covid19vaccineapp.adapter.TempRecAdapter
 import com.example.covid19vaccineapp.databinding.AlertLabelEditorBinding
 import java.text.SimpleDateFormat
 import java.util.*

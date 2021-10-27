@@ -6,12 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.doAfterTextChanged
-import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.covid19vaccineapp.R
-import com.example.covid19vaccineapp.SqlDataBaseHelper
+import com.example.covid19vaccineapp.helper.SqlDataBaseHelper
 import com.example.covid19vaccineapp.databinding.FragmentSignupBinding
 
 class SignupFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.covid19vaccineapp
+package com.example.covid19vaccineapp.helper
 
 import android.annotation.SuppressLint
 import android.content.ContentValues

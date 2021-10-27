@@ -1,4 +1,4 @@
-package com.example.covid19vaccineapp
+package com.example.covid19vaccineapp.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.model.TempRec
 
 class TempRecAdapter(private val tempRecList: List<TempRec>) : RecyclerView.Adapter<TempRecAdapter.ViewHolder>() {

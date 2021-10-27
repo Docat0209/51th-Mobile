@@ -15,4 +15,12 @@
         <item name="android:windowBackground">@color/blue</item>
         <item name="colorAccent">@color/purple_500</item>
     </style>
+
+    <style name="Theme.Covid19VaccineApp.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <item name="appWidgetRadius">8dp</item>
+        <item name="appWidgetPadding">4dp</item>
+        <item name="appWidgetInnerRadius">4dp</item>
+    </style>
+
+    <style name="Theme.Covid19VaccineApp.AppWidgetContainer" parent="Theme.Covid19VaccineApp.AppWidgetContainerParent" />
 </resources>
