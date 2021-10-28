@@ -1,6 +1,7 @@
 package com.example.covid19vaccineapp.ui.login
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.covid19vaccineapp.databinding.FragmentLoginBinding
 import androidx.navigation.Navigation
+import com.example.covid19vaccineapp.MainActivity
 import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.helper.SqlDataBaseHelper
 
@@ -26,7 +28,7 @@ class LoginFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -49,6 +51,22 @@ class LoginFragment : Fragment() {
         }
 
         return root
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val index = (requireActivity() as MainActivity).intent.getIntExtra("index",-1)
+
+        if (index != -1)
+        {
+            val bundle = Bundle().apply {
+                putInt("index",index)
+            }
+
+            Navigation.findNavController(binding.root).navigate(R.id.action_navigation_login_to_navigation_news_detail,bundle)
+        }
     }
 
     override fun onDestroyView() {

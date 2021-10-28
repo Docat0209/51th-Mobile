@@ -7,9 +7,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
+import com.example.covid19vaccineapp.MainActivity
 import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.model.WidgetItem
 import java.util.ArrayList
+
+import android.app.PendingIntent
+
+
+
 
 class ListWidgetService : RemoteViewsService() {
     override fun onGetViewFactory(intent: Intent): RemoteViewsFactory {
@@ -52,7 +58,7 @@ class ListWidgetService : RemoteViewsService() {
             return mCount
         }
 
-        @SuppressLint("RemoteViewLayout")
+        @SuppressLint("RemoteViewLayout", "UnspecifiedImmutableFlag")
         override fun getViewAt(position: Int): RemoteViews {
             println("getViewAt() is called for $mAppWidgetId")
 
@@ -70,11 +76,14 @@ class ListWidgetService : RemoteViewsService() {
 
             rv.setOnClickFillInIntent(R.id.widget_item, fillInIntent)
 
+
             try {
                 println("Loading view $position")
             } catch (e: InterruptedException) {
                 e.printStackTrace()
             }
+
+
             return rv
         }
 

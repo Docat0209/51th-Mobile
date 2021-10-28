@@ -7,8 +7,10 @@
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/drawable/bg_radius_15dp.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/drawable/bg_radius_20dp.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/drawable/bg_radius_5dp.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/drawable/bg_round.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/drawable/sb_thumb.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/drawable/seek_bar.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/font/alfa_slab_one.xml" value="0.3963541666666667" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/activity_main.xml" value="0.2046875" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/alert_label_editor.xml" value="0.5" />
@@ -18,11 +20,14 @@
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/fragment_home.xml" value="0.2046875" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/fragment_login.xml" value="0.2046875" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/fragment_news.xml" value="0.2046875" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/fragment_news_detail.xml" value="0.33" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/fragment_setting.xml" value="0.2046875" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/fragment_signup.xml" value="0.3596014492753623" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/fragment_temprec.xml" value="0.3596014492753623" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/list_widget.xml" value="0.3451086956521739" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/new_app_widget.xml" value="0.3451086956521739" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/toolbar_add.xml" value="0.3451086956521739" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/toolbar_setting.xml" value="0.3451086956521739" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/toolbar_up.xml" value="0.2046875" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/view_eduinfo.xml" value="0.2046875" />
         <entry key="..\:/Users/Docat/GitHub/51th-Mobile/Covid19VaccineApp/app/src/main/res/layout/view_news.xml" value="0.33" />

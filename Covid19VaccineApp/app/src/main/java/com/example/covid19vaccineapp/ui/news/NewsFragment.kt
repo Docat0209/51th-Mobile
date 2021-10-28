@@ -22,15 +22,13 @@ class NewsFragment : Fragment() {
 
     private var _binding: FragmentNewsBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentNewsBinding.inflate(inflater, container, false)
         val root: View = binding.root
@@ -40,7 +38,7 @@ class NewsFragment : Fragment() {
         toolbar!!.setDisplayShowTitleEnabled(false)
         binding.toolbarNews.toolbarTitle.text = resources.getString(R.string.title_eduinfo)
         binding.toolbarNews.toolbarCancel.setOnClickListener{
-            Navigation.findNavController(it).popBackStack()
+            Navigation.findNavController(it).navigate(R.id.navigation_home)
         }
         reload()
 
@@ -62,6 +60,7 @@ class NewsFragment : Fragment() {
         binding.newsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         Thread{
+
             val jsonData =
                 URL("http://54.234.67.26/taiwancovid19information/information/health").readText()
             val jsonObject = JSONObject(jsonData)
@@ -78,7 +77,8 @@ class NewsFragment : Fragment() {
             }
 
             activity?.runOnUiThread {
-                binding.newsRecyclerView.adapter = NewsAdapter(newsList)
+                binding.newsRecyclerView.adapter = NewsAdapter(requireContext(),newsList)
+                binding.newsRecyclerView
             }
             progressDialog.dismiss()
         }.start()

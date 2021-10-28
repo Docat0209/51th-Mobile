@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_news">
+    app:startDestination="@id/navigation_login">
 
     <fragment
         android:id="@+id/navigation_home"
@@ -35,7 +35,11 @@
         android:id="@+id/navigation_news"
         android:name="com.example.covid19vaccineapp.ui.news.NewsFragment"
         android:label="@string/title_news"
-        tools:layout="@layout/fragment_news" />
+        tools:layout="@layout/fragment_news" >
+        <action
+            android:id="@+id/action_navigation_news_to_navigation_news_detail"
+            app:destination="@id/navigation_news_detail" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_reserve"
         android:name="com.example.covid19vaccineapp.ui.reserve.ReserveFragment"
@@ -52,6 +56,9 @@
         <action
             android:id="@+id/action_navigation_login_to_navigation_signup"
             app:destination="@id/navigation_signup" />
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_news_detail"
+            app:destination="@id/navigation_news_detail" />
     </fragment>
     <fragment
         android:id="@+id/navigation_setting"
@@ -68,5 +75,11 @@
         android:name="com.example.covid19vaccineapp.ui.temprec.TemprecFragment"
         android:label="@string/title_temprec"
         tools:layout="@layout/fragment_temprec" />
+    <fragment
+        android:id="@+id/navigation_news_detail"
+        android:name="com.example.covid19vaccineapp.ui.news.NewsDetailFragment"
+        android:label="@string/title_news"
+        tools:layout="@layout/fragment_news_detail">
+    </fragment>
 
 </navigation>
