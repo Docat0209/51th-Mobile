@@ -23,7 +23,7 @@ class ReserveFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentReserveBinding.inflate(inflater, container, false)
         val root: View = binding.root

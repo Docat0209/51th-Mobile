@@ -2,8 +2,6 @@ package com.example.covid19vaccineapp.ui.home
 
 import android.os.Bundle
 import android.view.*
-import android.widget.TextView
-import android.widget.Toolbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -22,7 +20,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root

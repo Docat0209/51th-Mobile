@@ -1,6 +1,5 @@
 package com.example.covid19vaccineapp
 
-import com.google.api.Context
 import org.json.JSONObject
 import java.io.*
 import java.net.HttpURLConnection

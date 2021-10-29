@@ -24,7 +24,7 @@ class SignupFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentSignupBinding.inflate(inflater, container, false)
         val root: View = binding.root

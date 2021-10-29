@@ -7,13 +7,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
-import com.example.covid19vaccineapp.MainActivity
 import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.model.WidgetItem
 import java.util.ArrayList
-
-import android.app.PendingIntent
-
 
 
 

@@ -39,7 +39,7 @@ class TemprecFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentTemprecBinding.inflate(inflater, container, false)
         val root: View = binding.root

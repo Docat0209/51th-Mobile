@@ -1,7 +1,7 @@
 package com.example.covid19vaccineapp.ui.news
 
 import android.annotation.SuppressLint
-import android.app.ProgressDialog
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,7 +15,6 @@ import com.example.covid19vaccineapp.adapter.NewsAdapter
 import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.databinding.FragmentNewsBinding
 import com.example.covid19vaccineapp.model.News
-import com.google.api.Http
 import org.json.JSONObject
 
 class NewsFragment : Fragment() {
@@ -51,10 +50,12 @@ class NewsFragment : Fragment() {
         _binding = null
     }
 
-    @SuppressLint("Range", "SimpleDateFormat")
+    @SuppressLint("Range", "SimpleDateFormat", "InflateParams")
     fun reload()
     {
-        val progressDialog = ProgressDialog.show(requireContext(),"","Loading....")
+        val alertDialog = AlertDialog.Builder(requireContext()).setView(layoutInflater.inflate(R.layout.progress_bar,null)).create()
+        alertDialog.show()
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
 
         val newsList = mutableListOf<News>()
         binding.newsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -75,10 +76,11 @@ class NewsFragment : Fragment() {
             }
 
             activity?.runOnUiThread {
-                binding.newsRecyclerView.adapter = NewsAdapter(requireContext(),newsList)
+                binding.newsRecyclerView.adapter = NewsAdapter(newsList)
                 binding.newsRecyclerView
             }
-            progressDialog.dismiss()
+            alertDialog.dismiss()
+
         }.start()
 
     }

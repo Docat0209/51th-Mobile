@@ -21,7 +21,6 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.NotificationCompat
 
 import com.example.covid19vaccineapp.R
-import android.R.id
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
