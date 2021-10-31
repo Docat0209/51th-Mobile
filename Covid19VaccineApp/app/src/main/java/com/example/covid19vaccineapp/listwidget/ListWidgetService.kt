@@ -64,7 +64,7 @@ class ListWidgetService : RemoteViewsService() {
 
             val extras = Bundle()
 
-            extras.putInt(ListWidgetProvider.EXTRA_ITEM, position)
+            extras.putInt("0", position)
 
             val fillInIntent = Intent()
 

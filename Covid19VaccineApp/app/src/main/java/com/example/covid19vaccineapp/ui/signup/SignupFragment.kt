@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.covid19vaccineapp.R
-import com.example.covid19vaccineapp.helper.SqlDataBaseHelper
+import com.example.covid19vaccineapp.local_data.SqlDataBaseHelper
 import com.example.covid19vaccineapp.databinding.FragmentSignupBinding
 
 class SignupFragment : Fragment() {

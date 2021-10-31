@@ -20,13 +20,6 @@ class NewsAdapter(private val newsList: List<News>) : RecyclerView.Adapter<NewsA
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-        holder.binding.layout2.setOnClickListener{
-            val bundle = Bundle().apply {
-                putInt("index", position)
-            }
-
-            Navigation.findNavController(it).navigate(R.id.action_navigation_news_to_navigation_news_detail, bundle)
-        }
     }
 
     override fun getItemCount(): Int {

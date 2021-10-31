@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_setting" android:id="@+id/toolbar_home"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_app"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"
+        android:textSize="100sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_to_reserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius_20dp"
+        android:backgroundTint="@color/light_red"
+        android:layout_margin="20dp"
+        android:text="@string/title_reserve"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:textSize="60sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_to_epidemic_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius_20dp"
+        android:backgroundTint="@color/light_red"
+        android:layout_margin="20dp"
+        android:text="@string/title_epidemic_info"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:textSize="60sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_to_edu_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius_20dp"
+        android:backgroundTint="@color/light_red"
+        android:layout_margin="20dp"
+        android:text="@string/title_edu_info"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:textSize="60sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_to_temp_rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_radius_20dp"
+        android:backgroundTint="@color/light_red"
+        android:layout_margin="20dp"
+        android:text="@string/title_temp_rec"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-black"
+        android:textSize="60sp"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
