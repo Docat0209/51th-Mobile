@@ -18,7 +18,7 @@ import android.text.TextWatcher
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.covid19vaccineapp.helper.SqlDataBaseHelper
+import com.example.covid19vaccineapp.local_data.SqlDataBaseHelper
 import com.example.covid19vaccineapp.model.TempRec
 import com.example.covid19vaccineapp.adapter.TempRecAdapter
 import com.example.covid19vaccineapp.databinding.AlertLabelEditorBinding
@@ -39,7 +39,7 @@ class TemprecFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentTemprecBinding.inflate(inflater, container, false)
         val root: View = binding.root

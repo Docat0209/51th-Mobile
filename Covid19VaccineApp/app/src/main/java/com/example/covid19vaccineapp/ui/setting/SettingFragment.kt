@@ -22,7 +22,7 @@ class SettingFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentSettingBinding.inflate(inflater, container, false)
         val root: View = binding.root

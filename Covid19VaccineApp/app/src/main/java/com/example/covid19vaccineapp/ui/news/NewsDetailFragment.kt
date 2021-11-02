@@ -1,6 +1,5 @@
-package com.example.covid19vaccineapp.ui.news;
+package com.example.covid19vaccineapp.ui.news
 
-import android.app.ProgressDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,11 +7,8 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covid19vaccineapp.R
-import com.example.covid19vaccineapp.adapter.NewsAdapter
 import com.example.covid19vaccineapp.databinding.FragmentNewsDetailBinding
-import com.example.covid19vaccineapp.model.News
 import org.json.JSONObject
 import java.net.URL
 
@@ -25,7 +21,7 @@ class NewsDetailFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentNewsDetailBinding.inflate(inflater, container, false)
         // tool bar

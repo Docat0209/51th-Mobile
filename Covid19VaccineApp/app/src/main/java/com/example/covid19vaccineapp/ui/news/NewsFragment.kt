@@ -1,22 +1,21 @@
 package com.example.covid19vaccineapp.ui.news
 
 import android.annotation.SuppressLint
-import android.app.ProgressDialog
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.covid19vaccineapp.HttpGet
 import com.example.covid19vaccineapp.adapter.NewsAdapter
 import com.example.covid19vaccineapp.R
 import com.example.covid19vaccineapp.databinding.FragmentNewsBinding
 import com.example.covid19vaccineapp.model.News
 import org.json.JSONObject
-import java.net.URL
 
 class NewsFragment : Fragment() {
 
@@ -51,18 +50,18 @@ class NewsFragment : Fragment() {
         _binding = null
     }
 
-    @SuppressLint("Range", "SimpleDateFormat")
+    @SuppressLint("Range", "SimpleDateFormat", "InflateParams")
     fun reload()
     {
-        val progressDialog = ProgressDialog.show(requireContext(),"","Loading....")
+        val alertDialog = AlertDialog.Builder(requireContext()).setView(layoutInflater.inflate(R.layout.progress_bar,null)).create()
+        alertDialog.show()
+        alertDialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
 
         val newsList = mutableListOf<News>()
         binding.newsRecyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         Thread{
-
-            val jsonData =
-                URL("http://54.234.67.26/taiwancovid19information/information/health").readText()
+            val jsonData = HttpGet("information/health").get()
             val jsonObject = JSONObject(jsonData)
 
             val jsonArray = jsonObject.getJSONObject("message").getJSONArray("items")
@@ -77,10 +76,11 @@ class NewsFragment : Fragment() {
             }
 
             activity?.runOnUiThread {
-                binding.newsRecyclerView.adapter = NewsAdapter(requireContext(),newsList)
+                binding.newsRecyclerView.adapter = NewsAdapter(newsList)
                 binding.newsRecyclerView
             }
-            progressDialog.dismiss()
+            alertDialog.dismiss()
+
         }.start()
 
     }

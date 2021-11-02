@@ -1,12 +1,9 @@
 package com.example.covid19vaccineapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation
 import com.example.covid19vaccineapp.databinding.ActivityMainBinding
-import java.net.URL
 
 class MainActivity : AppCompatActivity() {
 

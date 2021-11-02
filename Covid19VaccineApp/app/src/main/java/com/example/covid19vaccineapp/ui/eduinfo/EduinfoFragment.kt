@@ -30,7 +30,7 @@ class EduinfoFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentEduinfoBinding.inflate(inflater, container, false)
         val root: View = binding.root

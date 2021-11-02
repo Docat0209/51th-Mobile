@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_radius_20dp"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="20dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/add_temp_rec"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.062"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_radius_4dp"
+            android:backgroundTint="@color/dark"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/test_temp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <SeekBar
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:min="300"
+            android:max="450"
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:maxHeight="12dp"
+            android:progressDrawable="@drawable/bg_progress"
+            android:splitTrack="false"
+            android:thumb="@drawable/bg_round_24dp"
+            android:thumbTint="@color/light_blue"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="20dp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/test_temp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="20dp"
+            android:text="@string/test_temp2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+        <LinearLayout
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/layout_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/bg_radius_10dp"
+            android:backgroundTint="@color/gray"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/seekBar"
+            tools:layout_editor_absoluteX="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/hint_date"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="@string/test_time"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="@color/purple_500" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_time"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="23dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/layout_date"
+            tools:layout_editor_absoluteX="20dp">
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_radius_10dp"
+                android:backgroundTint="@color/purple_200"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="240dp">
+
+                <TextView
+                    android:id="@+id/text_hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/test_number"
+                    android:textSize="60sp"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="290dp" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/split"
+                android:textSize="60sp"
+                tools:layout_editor_absoluteX="135dp"
+                tools:layout_editor_absoluteY="240dp" />
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_radius_10dp"
+                android:backgroundTint="@color/gray"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="240dp">
+
+                <TextView
+                    android:id="@+id/text_minute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/test_number"
+                    android:textSize="60sp"
+                    tools:layout_editor_absoluteX="54dp"
+                    tools:layout_editor_absoluteY="290dp" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="20dp"
+                android:background="@drawable/bg_radius_4dp"
+                android:backgroundTint="@color/gray"
+                android:orientation="vertical"
+                tools:ignore="UselessLeaf">
+
+                <RadioButton
+                    android:id="@+id/button_am"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/bg_radio_button"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/text_am"
+                    android:textColor="@drawable/bg_radio_text" />
+
+                <RadioButton
+                    android:id="@+id/button_pm"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_margin="1dp"
+                    android:background="@drawable/bg_radio_button"
+                    android:button="@android:color/transparent"
+                    android:gravity="center"
+                    android:text="@string/text_pm"
+                    android:textColor="@drawable/bg_radio_text"
+                    tools:ignore="TouchTargetSizeCheck" />
+            </RadioGroup>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_cancel"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/bg_radius_4dp"
+            android:text="@string/title_cancel"
+            android:textColor="@color/black"
+            android:theme="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:layout_constraintEnd_toStartOf="@+id/button_edit"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_time" />
+
+        <Button
+            android:id="@+id/button_edit"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/bg_radius_4dp"
+            android:backgroundTint="@color/blue"
+            android:text="@string/title_edit"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/layout_time" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

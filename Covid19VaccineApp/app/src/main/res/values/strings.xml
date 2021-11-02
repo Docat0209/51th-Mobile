@@ -58,7 +58,7 @@
     <string name="vaccine_bnt">BNT</string>
     <string name="vaccine_moderna">莫德納</string>
     <string name="vaccine_mvc">高端</string>
-    <string name="nofaction_month_time">2021 - 9</string>
+    <string name="nofaction_month_time">2021 – 9</string>
     <string name="nofaction_date">11</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
@@ -66,4 +66,5 @@
     <string name="empty">Empty</string>
     <string name="yyyy_mm_dd">yyyy/mm/dd</string>
     <string name="test_text">測試內容測試內容測試內容測試內容測試內容測試內容測試內容測試內容測試內容測試內容測試內容測試內容測試內容測試內容測試內容</string>
+    <string name="loading">loading…</string>
 </resources>
