@@ -1,0 +1,12 @@
+com/example/a51thmobile/databinding/MainActivityBinding.java
+ com.example.a51thmobile.databinding.MainActivityBinding
+com/example/a51thmobile/databinding/SettingsActivityBinding.java
+ com.example.a51thmobile.databinding.SettingsActivityBinding
+com/example/a51thmobile/BuildConfig.java
+ com.example.a51thmobile.BuildConfig
+com/example/a51thmobile/databinding/MainFragmentBinding.java
+ com.example.a51thmobile.databinding.MainFragmentBinding
+com/example/a51thmobile/databinding/SignupActivityBinding.java
+ com.example.a51thmobile.databinding.SignupActivityBinding
+com/example/a51thmobile/databinding/BackActivityBinding.java
+ com.example.a51thmobile.databinding.BackActivityBinding

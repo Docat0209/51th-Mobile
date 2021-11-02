@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_fragment.xml",
+        "source": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\src\\main\\res\\layout\\main_fragment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\toolbar.xml",
+        "source": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\src\\main\\res\\layout\\toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\back_activity.xml",
+        "source": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\src\\main\\res\\layout\\back_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\main_activity.xml",
+        "source": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\src\\main\\res\\layout\\main_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\settings_activity.xml",
+        "source": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\src\\main\\res\\layout\\settings_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\signup_activity.xml",
+        "source": "C:\\Users\\Docat\\GitHub\\51th-Mobile\\51thMobile\\app\\src\\main\\res\\layout\\signup_activity.xml"
+    }
+]
