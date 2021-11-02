@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ViaccineApp03</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="va_care">VA Care</string>
+    <string name="your_email">Your Email</string>
+    <string name="password">PASSWORD</string>
+    <string name="tw_login">登入</string>
+    <string name="sign_up">Sign up</string>
+    <string name="tw_title">標題</string>
+    <string name="cancel">Cancel</string>
+    <string name="setting">Setting</string>
+    <string name="add">Add</string>
+    <string name="tw_reserve">疫苗預約</string>
+    <string name="tw_epidemic_info">疫情資訊</string>
+    <string name="tw_edu_info">衛教資訊</string>
+    <string name="tw_temp_rec">體溫紀錄</string>
+    <string name="search">Search</string>
+    <string name="test">測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試測試</string>
+</resources>

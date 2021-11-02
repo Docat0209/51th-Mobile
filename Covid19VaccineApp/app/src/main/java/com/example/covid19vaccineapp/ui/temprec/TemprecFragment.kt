@@ -212,13 +212,19 @@ class TemprecFragment : Fragment() {
         val sql = SqlDataBaseHelper(requireContext())
         val tempList = mutableListOf<TempRec>()
 
-        val c = sql.getDate("select * from tempRec where time like '$like%' ")
+        val c = sql.getDate("select * from tempRec")
         while (c.moveToNext()){
             try {
-                tempList.add(TempRec( c.getString(c.getColumnIndex("time")) , c.getFloat(c.getColumnIndex("tempNum")) ))
+                val temp = TempRec( c.getString(c.getColumnIndex("time")) , c.getFloat(c.getColumnIndex("tempNum")))
+                if (temp.time.contains(like)){
+                    tempList.add(temp)
+                }
+
             } finally {
             }
         }
+
+        "".contains("")
 
         binding.recyclerView.adapter = TempRecAdapter(tempList)
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
