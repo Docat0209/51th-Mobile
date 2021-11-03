@@ -3,6 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/ViaccineApp03/app/src/main/res/drawable/ic_round_25dp.xml" value="0.403125" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/ViaccineApp03/app/src/main/res/drawable/ic_seekbar.xml" value="0.403125" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/ViaccineApp03/app/src/main/res/layout/dialog_add_temp_rec.xml" value="0.33" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/ViaccineApp03/app/src/main/res/layout/fragment_edu_info.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/ViaccineApp03/app/src/main/res/layout/fragment_reserve.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/ViaccineApp03/app/src/main/res/layout/fragment_temp_rec.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/ViaccineApp03/app/src/main/res/layout/list_item_temp_rec.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Docat/GitHub/51th-Mobile/ViaccineApp03/app/src/main/res/layout/list_layout_temp_rec.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Docat/GitHub/ViaccineApp03/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/Docat/GitHub/ViaccineApp03/app/src/main/res/drawable/ic_radius_4dp.xml" value="0.23489583333333333" />
         <entry key="..\:/Users/Docat/GitHub/ViaccineApp03/app/src/main/res/drawable/ic_radius_8dp.xml" value="0.23489583333333333" />

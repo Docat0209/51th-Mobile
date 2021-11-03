@@ -42,9 +42,9 @@ class SettingFragment : Fragment() {
                 switchNotification.isChecked = json.getBoolean("switch")
             }
             switchNotification.setOnCheckedChangeListener { _, p1 ->
-                val json = JSONObject()
-                json.put("switch",p1)
-                LocalJson(requireContext()).putData("switch",json)
+                val jsonObject = JSONObject()
+                jsonObject.put("switch",p1)
+                LocalJson(requireContext()).putData("switch",jsonObject)
             }
 
         }
