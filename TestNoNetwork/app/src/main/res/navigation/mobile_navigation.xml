@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_splash">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.testnonetwork.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_temp_rec"
+            app:destination="@id/navigation_temp_rec" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_setting"
+            app:destination="@id/navigation_setting" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_reserve"
+            app:destination="@id/navigation_reserve" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_edu_info"
+            app:destination="@id/navigation_edu_info" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_epidemic_info"
+            app:destination="@id/navigation_epidemic_info" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_splash"
+        android:name="com.example.testnonetwork.ui.splash.SplashFragment"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_navigation_splash_to_navigation_login"
+            app:destination="@id/navigation_login"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true"
+            app:exitAnim="@android:anim/fade_out"
+            app:enterAnim="@android:anim/fade_in"/>
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_edu_info"
+        android:name="com.example.testnonetwork.ui.eduInfo.EduInfoFragment"
+        tools:layout="@layout/fragment_edu_info"/>
+    <fragment
+        android:id="@+id/navigation_epidemic_info"
+        android:name="com.example.testnonetwork.ui.epidemicInfo.EpidemicInfoFragment"
+        tools:layout="@layout/fragment_epidemic_info"/>
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.example.testnonetwork.ui.login.LoginFragment"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_home"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/mobile_navigation"
+            app:popUpToInclusive="true"/>
+        <action
+            android:id="@+id/action_navigation_login_to_navigation_sign_up"
+            app:destination="@id/navigation_sign_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_reserve"
+        android:name="com.example.testnonetwork.ui.reserve.ReserveFragment"
+        tools:layout="@layout/fragment_reserve" />
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.example.testnonetwork.ui.setting.SettingFragment"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/navigation_sign_up"
+        android:name="com.example.testnonetwork.ui.signUp.SignUpFragment"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/navigation_temp_rec"
+        android:name="com.example.testnonetwork.ui.tempRec.TempRecFragment"
+        tools:layout="@layout/fragment_temp_rec" />
+</navigation>

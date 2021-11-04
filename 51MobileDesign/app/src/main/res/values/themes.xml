@@ -14,5 +14,5 @@
         <!-- Customize your theme here. -->
         <item name="android:windowBackground">@android:color/holo_blue_light</item>
         <item name="colorAccent">@color/purple_500</item>
-    </style>
+    </style>co
 </resources>

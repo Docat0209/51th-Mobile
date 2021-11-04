@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+    <include layout="@layout/toolbar_setting"
+        android:id="@+id/toolbar_home"/>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="VA Care"
+        android:textColor="@color/white"
+        android:textSize="100sp"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_to_reserve"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ic_radius_16dp"
+            android:backgroundTint="@color/light_red"
+            android:text="疫苗預約"
+            android:fontFamily="sans-serif-black"
+            android:textSize="48sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_to_epidemic_info"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ic_radius_16dp"
+            android:backgroundTint="@color/light_red"
+            android:text="疫情資訊"
+            android:fontFamily="sans-serif-black"
+            android:textSize="48sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_to_edu_info"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ic_radius_16dp"
+            android:backgroundTint="@color/light_red"
+            android:text="衛教資訊"
+            android:fontFamily="sans-serif-black"
+            android:textSize="48sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_to_tempRec"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/ic_radius_16dp"
+            android:backgroundTint="@color/light_red"
+            android:text="體溫紀錄"
+            android:fontFamily="sans-serif-black"
+            android:textSize="48sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -226,7 +226,7 @@ class TemprecFragment : Fragment() {
 
         "".contains("")
 
-        binding.recyclerView.adapter = TempRecAdapter(tempList)
+        binding.recyclerView.adapter = TempRecAdapter(requireContext(),tempList)
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
     }
 

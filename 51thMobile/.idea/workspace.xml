@@ -10,14 +10,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64eb2bfd-011a-4870-81f0-5301271b2b07" name="Default Changelist" comment="update day2 UI">
+      <change afterPath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/TempRecWidget.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/res/layout/temp_rec_widget.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ViaccineApp03/app/src/main/java/com/example/viaccineapp03/listWidget/ListWidgetProvider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ViaccineApp03/app/src/main/java/com/example/viaccineapp03/listWidget/ListWidgetService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Covid19VaccineApp/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Covid19VaccineApp/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/adapter/TempRecAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/adapter/TempRecAdapter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/listwidget/ListWidgetProvider.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/listwidget/ListWidgetProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/listwidget/ListWidgetService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/listwidget/ListWidgetService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/ui/temprec/TemprecFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/java/com/example/covid19vaccineapp/ui/temprec/TemprecFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Covid19VaccineApp/app/src/main/res/xml/list_widget_info.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Docat\.android\avd\Pixel_4_API_30.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\Docat\.android\avd\Pixel_5_API_29.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -37,7 +48,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1zedn176xfO5ID6C6enJvGg3yGh" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -47,7 +58,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Covid19VaccineApp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../51MobileDesign" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
