@@ -1,56 +1,43 @@
-package com.example.a51_mobile_design.widget
+package com.example.testnonetwork
 
 import android.content.Context
 import android.content.Intent
-import android.os.Bundle
 import android.widget.RemoteViews
 import android.widget.RemoteViewsService
-import com.example.a51_mobile_design.R
-import com.example.a51_mobile_design.model.WidgetItem
+import com.example.testnonetwork.model.EpidemicInfo
 
-class ListWidgetService :RemoteViewsService(){
-    override fun onGetViewFactory(p0: Intent): RemoteViewsFactory {
+class ListWidgetService:RemoteViewsService() {
+    override fun onGetViewFactory(p0: Intent?): RemoteViewsFactory {
         return ListWidgetFactory(applicationContext)
     }
-
-    internal inner class ListWidgetFactory(val context: Context):
-        RemoteViewsFactory{
-
-        private val count = 3
-        private val widgetItem: MutableList<WidgetItem> = ArrayList()
-
+    inner class ListWidgetFactory(val context: Context):RemoteViewsFactory{
+        val itemCount = 5
+        val list:MutableList<EpidemicInfo> = ArrayList()
         override fun onCreate() {
-            for(i in 1 until 3){
-                widgetItem.add(WidgetItem())
-            }
+            list.add(EpidemicInfo(null,"test01","time","asdfasdfd"))
+            list.add(EpidemicInfo(null,"test01","time","asdfasdfd"))
+            list.add(EpidemicInfo(null,"test01","time","asdfasdfd"))
+            list.add(EpidemicInfo(null,"test01","time","asdfasdfd"))
+            list.add(EpidemicInfo(null,"test01","time","asdfasdfd"))
         }
 
         override fun onDataSetChanged() {
         }
 
-
         override fun onDestroy() {
-            widgetItem.clear()
+            list.clear()
         }
 
         override fun getCount(): Int {
-            return count
+            return itemCount
         }
 
         override fun getViewAt(p0: Int): RemoteViews {
+            val remoteViews  = RemoteViews(context.packageName,R.layout.list_widget_item)
             println(p0)
-            val remoteViews = RemoteViews(context.packageName, R.layout.widget_item)
-
-            remoteViews.setTextViewText(R.id.widget_text,p0.toString())
-
-            val extras = Bundle()
-            extras.putInt("0",p0)
-
+            remoteViews.setTextViewText(R.id.widget_item_title,list[p0].text)
             val fillIntent = Intent()
-            fillIntent.putExtras(extras)
-
             remoteViews.setOnClickFillInIntent(R.id.widget_item,fillIntent)
-
             return remoteViews
         }
 

@@ -1,60 +1,80 @@
 package com.example.testnonetwork.ui.eduInfo
 
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
+import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.testnonetwork.MainActivity
 import com.example.testnonetwork.R
+import com.example.testnonetwork.adapter.EduInfoAdapter
+import com.example.testnonetwork.databinding.FragmentEduInfoBinding
+import com.example.testnonetwork.model.EduInfo
+import java.util.ArrayList
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [EduInfoFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class EduInfoFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+
+    private var _binding: FragmentEduInfoBinding? = null
+
+    private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_edu_info, container, false)
+    ): View {
+        _binding = FragmentEduInfoBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+        binding.apply {
+            toolbarEduInfo.title.text = "衛教資訊"
+            toolbarEduInfo.cancel.setOnClickListener{
+                Navigation.findNavController(root).popBackStack()
+            }
+            searchEduInfo.setOnQueryTextListener(object : androidx.appcompat.widget.SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(p0: String?): Boolean {
+                    return true
+                }
+
+                override fun onQueryTextChange(p0: String?): Boolean {
+                    update(requireContext(),ArrayList<EduInfo>())
+                    return true
+                }
+
+            })
+        }
+
+        return root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment EduInfoFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            EduInfoFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        update(requireContext(),ArrayList<EduInfo>())
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    @SuppressLint("InflateParams")
+    fun update(context: Context,list:ArrayList<EduInfo>){
+        for (i in 0 until list.count()) {
+            if ((context as MainActivity).findViewById<SearchView>(R.id.search_eduInfo).query.toString() in list[i].title) {
+                list.add(list[i])
             }
+        }
+        val adapter = EduInfoAdapter(context, list)
+
+        val listViewEduInfo = (context as Activity).findViewById<RecyclerView>(R.id.listView_eduInfo)
+        listViewEduInfo.adapter = adapter
+        listViewEduInfo.layoutManager = LinearLayoutManager(context)
     }
 }

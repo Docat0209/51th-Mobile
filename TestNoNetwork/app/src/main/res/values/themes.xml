@@ -15,4 +15,12 @@
         <item name="android:windowBackground">@color/light_blue</item>
         <item name="colorAccent">@color/dark</item>
     </style>
+
+    <style name="Theme.TestNoNetwork.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <item name="appWidgetRadius">8dp</item>
+        <item name="appWidgetPadding">4dp</item>
+        <item name="appWidgetInnerRadius">4dp</item>
+    </style>
+
+    <style name="Theme.TestNoNetwork.AppWidgetContainer" parent="Theme.TestNoNetwork.AppWidgetContainerParent" />
 </resources>
