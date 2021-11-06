@@ -2,15 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="50dp"
         android:background="@drawable/ic_radius_16dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:padding="20dp">
 
         <TextView
             android:id="@+id/textView5"
@@ -22,14 +24,14 @@
 
         <SeekBar
             android:id="@+id/seekBar_temp"
-            android:thumb="@drawable/ic_round_25dp"
-            android:thumbTint="@color/light_blue"
-            android:progressDrawable="@drawable/ic_seekbar"
-            android:maxHeight="12dp"
-            android:splitTrack="false"
             android:layout_width="match_parent"
             android:layout_height="21dp"
             android:layout_marginTop="40dp"
+            android:maxHeight="12dp"
+            android:progressDrawable="@drawable/ic_seekbar"
+            android:splitTrack="false"
+            android:thumb="@drawable/ic_round_25dp"
+            android:thumbTint="@color/light_blue"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
             tools:layout_editor_absoluteX="20dp" />
 
@@ -107,11 +109,11 @@
                     android:gravity="center">
 
                     <TextView
-                        android:textColor="@color/purple_500"
                         android:id="@+id/text_hour"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="12"
+                        android:textColor="@color/purple_500"
                         android:textSize="50sp" />
 
 
@@ -138,18 +140,18 @@
                 </LinearLayout>
 
                 <RadioGroup
-                    android:padding="2dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:background="@drawable/ic_radius_4dp"
-                    android:backgroundTint="@android:color/darker_gray">
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:padding="2dp">
 
                     <RadioButton
-                        android:layout_marginBottom="1dp"
                         android:id="@+id/button_am"
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
+                        android:layout_marginBottom="1dp"
                         android:background="@color/white"
                         android:button="@color/white"
                         android:padding="3dp"
@@ -170,40 +172,42 @@
 
 
         <TableLayout
-            android:stretchColumns="*"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="36dp"
+            android:stretchColumns="*"
             app:layout_constraintTop_toBottomOf="@+id/TableLayout2"
-            tools:layout_editor_absoluteX="2dp" >
+            tools:layout_editor_absoluteX="2dp">
+
             <TableRow>
+
                 <Button
                     android:id="@+id/button_add"
                     android:layout_marginEnd="5dp"
                     android:background="@drawable/ic_radius_8dp"
                     android:text="取消"
-                    android:textSize="12sp"
                     android:textColor="@color/black"
-                    />
+                    android:textSize="12sp" />
+
                 <Button
                     android:id="@+id/button_cancel"
                     android:layout_marginStart="5dp"
                     android:background="@drawable/ic_radius_8dp"
                     android:backgroundTint="@color/blue"
                     android:text="新增"
-                    android:textColor="@color/white"/>
+                    android:textColor="@color/white" />
             </TableRow>
         </TableLayout>
 
         <TextView
-            android:background="@drawable/ic_radius_4dp"
-            android:backgroundTint="@color/black"
-            android:textColor="@color/white"
             android:id="@+id/text_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
+            android:background="@drawable/ic_radius_4dp"
+            android:backgroundTint="@color/black"
             android:text="30.0°C"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@+id/seekBar_temp"
             app:layout_constraintStart_toStartOf="parent" />
 

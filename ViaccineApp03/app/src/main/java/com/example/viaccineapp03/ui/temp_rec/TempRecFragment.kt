@@ -2,6 +2,7 @@ package com.example.viaccineapp03.ui.temp_rec
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Context
 import android.os.Bundle
 import android.os.Handler
@@ -17,6 +18,7 @@ import com.example.viaccineapp03.databinding.DialogAddTempRecBinding
 import com.example.viaccineapp03.databinding.FragmentTempRecBinding
 import com.example.viaccineapp03.local_data.LocalJson
 import org.json.JSONObject
+import java.util.zip.Inflater
 
 class TempRecFragment : Fragment() {
 
@@ -58,11 +60,14 @@ class TempRecFragment : Fragment() {
     @SuppressLint("InflateParams")
     fun dialogAdd(context: Context){
         val dialogBuilder = AlertDialog.Builder(context)
+
         val dialogView = LayoutInflater.from(context).inflate(R.layout.dialog_add_temp_rec,null,false)
         dialogBuilder.setView(dialogView)
+
         val dialog = dialogBuilder.create()
         dialog.show()
         dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
+
         val dialogBinding = DialogAddTempRecBinding.bind(dialogView)
         dialogBinding.apply {
 

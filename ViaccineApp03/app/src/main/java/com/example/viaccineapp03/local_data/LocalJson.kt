@@ -5,11 +5,14 @@ import android.content.Context
 import org.json.JSONObject
 
 class LocalJson(val context: Context) {
-    fun getData(key:String):JSONObject{
-        val json = (context as Activity).getPreferences(Context.MODE_PRIVATE).getString(key,"{}")
-        return JSONObject(json.toString())
+    fun getData(key:String): JSONObject {
+        val data = (context as Activity).getPreferences(Context.MODE_PRIVATE).getString(key,"{}")
+        return JSONObject(data.toString())
     }
-    fun putData(key:String , value:JSONObject){
-        (context as Activity).getPreferences(Context.MODE_PRIVATE).edit().putString(key,value.toString()).apply()
+    fun putData(key: String , jsonObject: JSONObject){
+        context.getSharedPreferences(key,Context.MODE_PRIVATE)
+            .edit()
+            .putString(key,jsonObject.toString())
+            .apply()
     }
 }

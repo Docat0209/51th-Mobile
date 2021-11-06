@@ -8,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.testnonetwork.databinding.ActivityMainBinding
+import org.json.JSONObject
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,5 +19,6 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
     }
 }
